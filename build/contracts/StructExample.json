@@ -1,0 +1,1655 @@
+{
+  "contractName": "StructExample",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "alice",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "score",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "bob",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "score",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "ric",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "score",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_score",
+          "type": "uint256"
+        }
+      ],
+      "name": "updateBobScore",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "readBobScore",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "bobDelete",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.0+commit.9e61f92b\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"alice\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"score\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"bob\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"score\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"bobDelete\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"readBobScore\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ric\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"score\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_score\",\"type\":\"uint256\"}],\"name\":\"updateBobScore\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ricardoteixeira/Documents/code/solidity/udemy_solidity_0.7/contracts/StructExample.sol\":\"StructExample\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ricardoteixeira/Documents/code/solidity/udemy_solidity_0.7/contracts/StructExample.sol\":{\"keccak256\":\"0x30cac22537a41b303b399aead8144527f35da835834c5294a83128c375278304\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9fd91cd88d2b55fda637097406ee216352e5178d584b4192ed7dd4790cbe05e3\",\"dweb:/ipfs/QmVeCmpfZcNT6QAC7qsiP85Q4zUtxPqNCLMY2GbsWRdXR9\"]}},\"version\":1}",
+  "bytecode": "0x608060405260405180604001604052806040518060400160405280600381526020017f426f6200000000000000000000000000000000000000000000000000000000008152508152602001603281525060008082015181600001908051906020019061006c929190610177565b5060208201518160010155505060405180604001604052806040518060400160405280600581526020017f416c69636500000000000000000000000000000000000000000000000000000081525081526020016019815250600260008201518160000190805190602001906100e2929190610177565b5060208201518160010155505060405180604001604052806040518060400160405280600381526020017f52696300000000000000000000000000000000000000000000000000000000008152508152602001601e81525060046000820151816000019080519060200190610158929190610177565b5060208201518160010155505034801561017157600080fd5b50610214565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101b857805160ff19168380011785556101e6565b828001600101855582156101e6579182015b828111156101e55782518255916020019190600101906101ca565b5b5090506101f391906101f7565b5090565b5b808211156102105760008160009055506001016101f8565b5090565b61052c806102236000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c8063330de8d2146100675780635fa1350414610071578063c09cec771461008f578063e37987a414610119578063f27be9dd14610147578063fb47e3a2146101d1575b600080fd5b61006f61025b565b005b61007961027a565b6040518082815260200191505060405180910390f35b610097610286565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100dd5780820151818401526020810190506100c2565b50505050905090810190601f16801561010a5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101456004803603602081101561012f57600080fd5b8101908080359060200190929190505050610330565b005b61014f61033d565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b8381101561019557808201518184015260208101905061017a565b50505050905090810190601f1680156101c25780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101d96103e7565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b8381101561021f578082015181840152602081019050610204565b50505050905090810190601f16801561024c5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b60008060008201600061026e9190610491565b60018201600090555050565b60008060010154905090565b6000806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103205780601f106102f557610100808354040283529160200191610320565b820191906000526020600020905b81548152906001019060200180831161030357829003601f168201915b5050505050908060010154905082565b8060006001018190555050565b6004806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103d75780601f106103ac576101008083540402835291602001916103d7565b820191906000526020600020905b8154815290600101906020018083116103ba57829003601f168201915b5050505050908060010154905082565b6002806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104815780601f1061045657610100808354040283529160200191610481565b820191906000526020600020905b81548152906001019060200180831161046457829003601f168201915b5050505050908060010154905082565b50805460018160011615610100020316600290046000825580601f106104b757506104d6565b601f0160209004906000526020600020908101906104d591906104d9565b5b50565b5b808211156104f25760008160009055506001016104da565b509056fea264697066735822122046bfd023b7bc1fe562317d2b65ac283641f9d6ab2a843a8dda6fb3cbc77b011164736f6c63430007000033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c8063330de8d2146100675780635fa1350414610071578063c09cec771461008f578063e37987a414610119578063f27be9dd14610147578063fb47e3a2146101d1575b600080fd5b61006f61025b565b005b61007961027a565b6040518082815260200191505060405180910390f35b610097610286565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100dd5780820151818401526020810190506100c2565b50505050905090810190601f16801561010a5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101456004803603602081101561012f57600080fd5b8101908080359060200190929190505050610330565b005b61014f61033d565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b8381101561019557808201518184015260208101905061017a565b50505050905090810190601f1680156101c25780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101d96103e7565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b8381101561021f578082015181840152602081019050610204565b50505050905090810190601f16801561024c5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b60008060008201600061026e9190610491565b60018201600090555050565b60008060010154905090565b6000806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103205780601f106102f557610100808354040283529160200191610320565b820191906000526020600020905b81548152906001019060200180831161030357829003601f168201915b5050505050908060010154905082565b8060006001018190555050565b6004806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103d75780601f106103ac576101008083540402835291602001916103d7565b820191906000526020600020905b8154815290600101906020018083116103ba57829003601f168201915b5050505050908060010154905082565b6002806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104815780601f1061045657610100808354040283529160200191610481565b820191906000526020600020905b81548152906001019060200180831161046457829003601f168201915b5050505050908060010154905082565b50805460018160011615610100020316600290046000825580601f106104b757506104d6565b601f0160209004906000526020600020908101906104d591906104d9565b5b50565b5b808211156104f25760008160009055506001016104da565b509056fea264697066735822122046bfd023b7bc1fe562317d2b65ac283641f9d6ab2a843a8dda6fb3cbc77b011164736f6c63430007000033",
+  "immutableReferences": {},
+  "sourceMap": "57:590:1:-:0;;;197:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;210:2;197:16;;;177:36;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;241:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;256:2;241:18;;;219:40;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;285:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;309:2;285:54;;;265:74;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;57:590;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "57:590:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;586:57;;;:::i;:::-;;473:86;;;:::i;:::-;;;;;;;;;;;;;;;;;;;177:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;367:81;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;265:74;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;219:40;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;586:57;633:3;;626:10;;;;;;;;:::i;:::-;;;;;;;;;586:57::o;473:86::-;520:4;543:3;:9;;;536:16;;473:86;:::o;177:36::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;367:81::-;435:6;423:3;:9;;:18;;;;367:81;:::o;265:74::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;219:40::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.7.0;\n\ncontract StructExample {\n\n    struct Player {\n        string name;\n        uint score;\n    }\n\n\n    // create struct\n    Player public bob = Player(\"Bob\",50);\n    Player public alice = Player(\"Alice\",25);\n    Player public ric = Player({\n        score: 30,\n        name: \"Ric\"\n    });\n\n    // update struct\n    function updateBobScore(uint _score) external {\n        bob.score = _score;\n    }\n\n    // read struct\n    function readBobScore() external view returns (uint) {\n        return bob.score;\n    }\n\n    // delete struct\n    function bobDelete() external {\n        delete bob;\n    }\n\n\n}",
+  "sourcePath": "/Users/ricardoteixeira/Documents/code/solidity/udemy_solidity_0.7/contracts/StructExample.sol",
+  "ast": {
+    "absolutePath": "/Users/ricardoteixeira/Documents/code/solidity/udemy_solidity_0.7/contracts/StructExample.sol",
+    "exportedSymbols": {
+      "StructExample": [
+        79
+      ]
+    },
+    "id": 80,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 27,
+        "literals": [
+          "solidity",
+          "^",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 79,
+        "linearizedBaseContracts": [
+          79
+        ],
+        "name": "StructExample",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "StructExample.Player",
+            "id": 32,
+            "members": [
+              {
+                "constant": false,
+                "id": 29,
+                "mutability": "mutable",
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 32,
+                "src": "111:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 28,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "111:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 31,
+                "mutability": "mutable",
+                "name": "score",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 32,
+                "src": "132:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 30,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "132:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Player",
+            "nodeType": "StructDefinition",
+            "scope": 79,
+            "src": "87:62:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "c09cec77",
+            "id": 38,
+            "mutability": "mutable",
+            "name": "bob",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 79,
+            "src": "177:36:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Player_$32_storage",
+              "typeString": "struct StructExample.Player"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 33,
+              "name": "Player",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 32,
+              "src": "177:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Player_$32_storage_ptr",
+                "typeString": "struct StructExample.Player"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "426f62",
+                  "id": 35,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "204:5:1",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_28cac318a86c8a0a6a9156c2dba2c8c2363677ba0514ef616592d81557e679b6",
+                    "typeString": "literal_string \"Bob\""
+                  },
+                  "value": "Bob"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "3530",
+                  "id": 36,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "210:2:1",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_50_by_1",
+                    "typeString": "int_const 50"
+                  },
+                  "value": "50"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_28cac318a86c8a0a6a9156c2dba2c8c2363677ba0514ef616592d81557e679b6",
+                    "typeString": "literal_string \"Bob\""
+                  },
+                  {
+                    "typeIdentifier": "t_rational_50_by_1",
+                    "typeString": "int_const 50"
+                  }
+                ],
+                "id": 34,
+                "name": "Player",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 32,
+                "src": "197:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_struct$_Player_$32_storage_ptr_$",
+                  "typeString": "type(struct StructExample.Player storage pointer)"
+                }
+              },
+              "id": 37,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "structConstructorCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "197:16:1",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Player_$32_memory_ptr",
+                "typeString": "struct StructExample.Player memory"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "fb47e3a2",
+            "id": 44,
+            "mutability": "mutable",
+            "name": "alice",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 79,
+            "src": "219:40:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Player_$32_storage",
+              "typeString": "struct StructExample.Player"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 39,
+              "name": "Player",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 32,
+              "src": "219:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Player_$32_storage_ptr",
+                "typeString": "struct StructExample.Player"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "416c696365",
+                  "id": 41,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "248:7:1",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_81376b9868b292a46a1c486d344e427a3088657fda629b5f4a647822d329cd6a",
+                    "typeString": "literal_string \"Alice\""
+                  },
+                  "value": "Alice"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "3235",
+                  "id": 42,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "256:2:1",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_25_by_1",
+                    "typeString": "int_const 25"
+                  },
+                  "value": "25"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_81376b9868b292a46a1c486d344e427a3088657fda629b5f4a647822d329cd6a",
+                    "typeString": "literal_string \"Alice\""
+                  },
+                  {
+                    "typeIdentifier": "t_rational_25_by_1",
+                    "typeString": "int_const 25"
+                  }
+                ],
+                "id": 40,
+                "name": "Player",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 32,
+                "src": "241:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_struct$_Player_$32_storage_ptr_$",
+                  "typeString": "type(struct StructExample.Player storage pointer)"
+                }
+              },
+              "id": 43,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "structConstructorCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "241:18:1",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Player_$32_memory_ptr",
+                "typeString": "struct StructExample.Player memory"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "f27be9dd",
+            "id": 50,
+            "mutability": "mutable",
+            "name": "ric",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 79,
+            "src": "265:74:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Player_$32_storage",
+              "typeString": "struct StructExample.Player"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 45,
+              "name": "Player",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 32,
+              "src": "265:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Player_$32_storage_ptr",
+                "typeString": "struct StructExample.Player"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "3330",
+                  "id": 47,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "309:2:1",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_30_by_1",
+                    "typeString": "int_const 30"
+                  },
+                  "value": "30"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "526963",
+                  "id": 48,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "327:5:1",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_9b8ad6ff1f87947b803b17b61e8ff401384633a42fac4f5accc09727a435c93f",
+                    "typeString": "literal_string \"Ric\""
+                  },
+                  "value": "Ric"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_30_by_1",
+                    "typeString": "int_const 30"
+                  },
+                  {
+                    "typeIdentifier": "t_stringliteral_9b8ad6ff1f87947b803b17b61e8ff401384633a42fac4f5accc09727a435c93f",
+                    "typeString": "literal_string \"Ric\""
+                  }
+                ],
+                "id": 46,
+                "name": "Player",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 32,
+                "src": "285:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_struct$_Player_$32_storage_ptr_$",
+                  "typeString": "type(struct StructExample.Player storage pointer)"
+                }
+              },
+              "id": 49,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "structConstructorCall",
+              "lValueRequested": false,
+              "names": [
+                "score",
+                "name"
+              ],
+              "nodeType": "FunctionCall",
+              "src": "285:54:1",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Player_$32_memory_ptr",
+                "typeString": "struct StructExample.Player memory"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 61,
+              "nodeType": "Block",
+              "src": "413:35:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 59,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 55,
+                        "name": "bob",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38,
+                        "src": "423:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Player_$32_storage",
+                          "typeString": "struct StructExample.Player storage ref"
+                        }
+                      },
+                      "id": 57,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "score",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 31,
+                      "src": "423:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 58,
+                      "name": "_score",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 52,
+                      "src": "435:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "423:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 60,
+                  "nodeType": "ExpressionStatement",
+                  "src": "423:18:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "e37987a4",
+            "id": 62,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateBobScore",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 53,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52,
+                  "mutability": "mutable",
+                  "name": "_score",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 62,
+                  "src": "391:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "391:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "390:13:1"
+            },
+            "returnParameters": {
+              "id": 54,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "413:0:1"
+            },
+            "scope": 79,
+            "src": "367:81:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 70,
+              "nodeType": "Block",
+              "src": "526:33:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 67,
+                      "name": "bob",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "543:3:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Player_$32_storage",
+                        "typeString": "struct StructExample.Player storage ref"
+                      }
+                    },
+                    "id": 68,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "score",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 31,
+                    "src": "543:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 66,
+                  "id": 69,
+                  "nodeType": "Return",
+                  "src": "536:16:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "5fa13504",
+            "id": 71,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "readBobScore",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 63,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "494:2:1"
+            },
+            "returnParameters": {
+              "id": 66,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 65,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 71,
+                  "src": "520:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 64,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "520:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "519:6:1"
+            },
+            "scope": 79,
+            "src": "473:86:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 77,
+              "nodeType": "Block",
+              "src": "616:27:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 75,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "delete",
+                    "prefix": true,
+                    "src": "626:10:1",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 74,
+                      "name": "bob",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "633:3:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Player_$32_storage",
+                        "typeString": "struct StructExample.Player storage ref"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 76,
+                  "nodeType": "ExpressionStatement",
+                  "src": "626:10:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "330de8d2",
+            "id": 78,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bobDelete",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 72,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "604:2:1"
+            },
+            "returnParameters": {
+              "id": 73,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "616:0:1"
+            },
+            "scope": 79,
+            "src": "586:57:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 80,
+        "src": "57:590:1"
+      }
+    ],
+    "src": "32:615:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/ricardoteixeira/Documents/code/solidity/udemy_solidity_0.7/contracts/StructExample.sol",
+      "exportedSymbols": {
+        "StructExample": [
+          79
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.7",
+            ".0"
+          ]
+        },
+        "id": 27,
+        "name": "PragmaDirective",
+        "src": "32:23:1"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            79
+          ],
+          "name": "StructExample",
+          "scope": 80
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "StructExample.Player",
+              "name": "Player",
+              "scope": 79,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "overrides": null,
+                  "scope": 32,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 28,
+                    "name": "ElementaryTypeName",
+                    "src": "111:6:1"
+                  }
+                ],
+                "id": 29,
+                "name": "VariableDeclaration",
+                "src": "111:11:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "score",
+                  "overrides": null,
+                  "scope": 32,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 30,
+                    "name": "ElementaryTypeName",
+                    "src": "132:4:1"
+                  }
+                ],
+                "id": 31,
+                "name": "VariableDeclaration",
+                "src": "132:10:1"
+              }
+            ],
+            "id": 32,
+            "name": "StructDefinition",
+            "src": "87:62:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "c09cec77",
+              "mutability": "mutable",
+              "name": "bob",
+              "overrides": null,
+              "scope": 79,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct StructExample.Player",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Player",
+                  "referencedDeclaration": 32,
+                  "type": "struct StructExample.Player"
+                },
+                "id": 33,
+                "name": "UserDefinedTypeName",
+                "src": "177:6:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "isStructConstructorCall": true,
+                  "lValueRequested": false,
+                  "names": [
+                    null
+                  ],
+                  "tryCall": false,
+                  "type": "struct StructExample.Player memory",
+                  "type_conversion": false
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_28cac318a86c8a0a6a9156c2dba2c8c2363677ba0514ef616592d81557e679b6",
+                          "typeString": "literal_string \"Bob\""
+                        },
+                        {
+                          "typeIdentifier": "t_rational_50_by_1",
+                          "typeString": "int_const 50"
+                        }
+                      ],
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 32,
+                      "type": "type(struct StructExample.Player storage pointer)",
+                      "value": "Player"
+                    },
+                    "id": 34,
+                    "name": "Identifier",
+                    "src": "197:6:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "426f62",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "string",
+                      "type": "literal_string \"Bob\"",
+                      "value": "Bob"
+                    },
+                    "id": 35,
+                    "name": "Literal",
+                    "src": "204:5:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "3530",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "number",
+                      "type": "int_const 50",
+                      "value": "50"
+                    },
+                    "id": 36,
+                    "name": "Literal",
+                    "src": "210:2:1"
+                  }
+                ],
+                "id": 37,
+                "name": "FunctionCall",
+                "src": "197:16:1"
+              }
+            ],
+            "id": 38,
+            "name": "VariableDeclaration",
+            "src": "177:36:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "fb47e3a2",
+              "mutability": "mutable",
+              "name": "alice",
+              "overrides": null,
+              "scope": 79,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct StructExample.Player",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Player",
+                  "referencedDeclaration": 32,
+                  "type": "struct StructExample.Player"
+                },
+                "id": 39,
+                "name": "UserDefinedTypeName",
+                "src": "219:6:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "isStructConstructorCall": true,
+                  "lValueRequested": false,
+                  "names": [
+                    null
+                  ],
+                  "tryCall": false,
+                  "type": "struct StructExample.Player memory",
+                  "type_conversion": false
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_81376b9868b292a46a1c486d344e427a3088657fda629b5f4a647822d329cd6a",
+                          "typeString": "literal_string \"Alice\""
+                        },
+                        {
+                          "typeIdentifier": "t_rational_25_by_1",
+                          "typeString": "int_const 25"
+                        }
+                      ],
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 32,
+                      "type": "type(struct StructExample.Player storage pointer)",
+                      "value": "Player"
+                    },
+                    "id": 40,
+                    "name": "Identifier",
+                    "src": "241:6:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "416c696365",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "string",
+                      "type": "literal_string \"Alice\"",
+                      "value": "Alice"
+                    },
+                    "id": 41,
+                    "name": "Literal",
+                    "src": "248:7:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "3235",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "number",
+                      "type": "int_const 25",
+                      "value": "25"
+                    },
+                    "id": 42,
+                    "name": "Literal",
+                    "src": "256:2:1"
+                  }
+                ],
+                "id": 43,
+                "name": "FunctionCall",
+                "src": "241:18:1"
+              }
+            ],
+            "id": 44,
+            "name": "VariableDeclaration",
+            "src": "219:40:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "f27be9dd",
+              "mutability": "mutable",
+              "name": "ric",
+              "overrides": null,
+              "scope": 79,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct StructExample.Player",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Player",
+                  "referencedDeclaration": 32,
+                  "type": "struct StructExample.Player"
+                },
+                "id": 45,
+                "name": "UserDefinedTypeName",
+                "src": "265:6:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "isStructConstructorCall": true,
+                  "lValueRequested": false,
+                  "names": [
+                    "score",
+                    "name"
+                  ],
+                  "tryCall": false,
+                  "type": "struct StructExample.Player memory",
+                  "type_conversion": false
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_30_by_1",
+                          "typeString": "int_const 30"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9b8ad6ff1f87947b803b17b61e8ff401384633a42fac4f5accc09727a435c93f",
+                          "typeString": "literal_string \"Ric\""
+                        }
+                      ],
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 32,
+                      "type": "type(struct StructExample.Player storage pointer)",
+                      "value": "Player"
+                    },
+                    "id": 46,
+                    "name": "Identifier",
+                    "src": "285:6:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "3330",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "number",
+                      "type": "int_const 30",
+                      "value": "30"
+                    },
+                    "id": 47,
+                    "name": "Literal",
+                    "src": "309:2:1"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "526963",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "string",
+                      "type": "literal_string \"Ric\"",
+                      "value": "Ric"
+                    },
+                    "id": 48,
+                    "name": "Literal",
+                    "src": "327:5:1"
+                  }
+                ],
+                "id": 49,
+                "name": "FunctionCall",
+                "src": "285:54:1"
+              }
+            ],
+            "id": 50,
+            "name": "VariableDeclaration",
+            "src": "265:74:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "e37987a4",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "updateBobScore",
+              "overrides": null,
+              "scope": 79,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_score",
+                      "overrides": null,
+                      "scope": 62,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 51,
+                        "name": "ElementaryTypeName",
+                        "src": "391:4:1"
+                      }
+                    ],
+                    "id": 52,
+                    "name": "VariableDeclaration",
+                    "src": "391:11:1"
+                  }
+                ],
+                "id": 53,
+                "name": "ParameterList",
+                "src": "390:13:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 54,
+                "name": "ParameterList",
+                "src": "413:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "score",
+                              "referencedDeclaration": 31,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 38,
+                                  "type": "struct StructExample.Player storage ref",
+                                  "value": "bob"
+                                },
+                                "id": 55,
+                                "name": "Identifier",
+                                "src": "423:3:1"
+                              }
+                            ],
+                            "id": 57,
+                            "name": "MemberAccess",
+                            "src": "423:9:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 52,
+                              "type": "uint256",
+                              "value": "_score"
+                            },
+                            "id": 58,
+                            "name": "Identifier",
+                            "src": "435:6:1"
+                          }
+                        ],
+                        "id": 59,
+                        "name": "Assignment",
+                        "src": "423:18:1"
+                      }
+                    ],
+                    "id": 60,
+                    "name": "ExpressionStatement",
+                    "src": "423:18:1"
+                  }
+                ],
+                "id": 61,
+                "name": "Block",
+                "src": "413:35:1"
+              }
+            ],
+            "id": 62,
+            "name": "FunctionDefinition",
+            "src": "367:81:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "5fa13504",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "readBobScore",
+              "overrides": null,
+              "scope": 79,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 63,
+                "name": "ParameterList",
+                "src": "494:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 71,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 64,
+                        "name": "ElementaryTypeName",
+                        "src": "520:4:1"
+                      }
+                    ],
+                    "id": 65,
+                    "name": "VariableDeclaration",
+                    "src": "520:4:1"
+                  }
+                ],
+                "id": 66,
+                "name": "ParameterList",
+                "src": "519:6:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 66
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "score",
+                          "referencedDeclaration": 31,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 38,
+                              "type": "struct StructExample.Player storage ref",
+                              "value": "bob"
+                            },
+                            "id": 67,
+                            "name": "Identifier",
+                            "src": "543:3:1"
+                          }
+                        ],
+                        "id": 68,
+                        "name": "MemberAccess",
+                        "src": "543:9:1"
+                      }
+                    ],
+                    "id": 69,
+                    "name": "Return",
+                    "src": "536:16:1"
+                  }
+                ],
+                "id": 70,
+                "name": "Block",
+                "src": "526:33:1"
+              }
+            ],
+            "id": 71,
+            "name": "FunctionDefinition",
+            "src": "473:86:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "330de8d2",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "bobDelete",
+              "overrides": null,
+              "scope": 79,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 72,
+                "name": "ParameterList",
+                "src": "604:2:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 73,
+                "name": "ParameterList",
+                "src": "616:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "delete",
+                          "prefix": true,
+                          "type": "tuple()"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 38,
+                              "type": "struct StructExample.Player storage ref",
+                              "value": "bob"
+                            },
+                            "id": 74,
+                            "name": "Identifier",
+                            "src": "633:3:1"
+                          }
+                        ],
+                        "id": 75,
+                        "name": "UnaryOperation",
+                        "src": "626:10:1"
+                      }
+                    ],
+                    "id": 76,
+                    "name": "ExpressionStatement",
+                    "src": "626:10:1"
+                  }
+                ],
+                "id": 77,
+                "name": "Block",
+                "src": "616:27:1"
+              }
+            ],
+            "id": 78,
+            "name": "FunctionDefinition",
+            "src": "586:57:1"
+          }
+        ],
+        "id": 79,
+        "name": "ContractDefinition",
+        "src": "57:590:1"
+      }
+    ],
+    "id": 80,
+    "name": "SourceUnit",
+    "src": "32:615:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.0+commit.9e61f92b.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xf8755a7212793eBE95614B8324219f7B6Ce29774",
+      "transactionHash": "0x233ed3c4e799264c168fd47dea0997defcae4893aeadb7173b14c0a5fde9aa04"
+    }
+  },
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-06T23:53:24.833Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
