@@ -8,6 +8,7 @@ contract StructExample {
         uint score;
     }
 
+    uint public numero = 10;
 
     // create struct
     Player public bob = Player("Bob",50);
