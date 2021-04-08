@@ -1,12 +1,32 @@
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity ^0.7.0;
 
+
+contract Ownable {
+    address payable public owner;
+
+     constructor() {
+        
+        // run the constructor of all parent contracts
+        super;
+        // the person address who deployed the contract
+        owner = msg.sender;
+    }
+
+    // modifier to allow only who deployed the contract to run
+    modifier onlyOwner {
+        require(msg.sender == owner, "Only the owner can run this");
+        _;
+    }
+
+}
+
+
 /// @title A parking Lot contract
 /// @author Ricardo
 /// @notice client pay to park, park lot got a owner, and could get full
-contract ParkingLot {
+contract ParkingLot is Ownable {
 
-    address payable public owner;
 
     // track if parking lot is full
     enum LotStatus { VACANT, FULL }
@@ -41,6 +61,11 @@ contract ParkingLot {
         owner.transfer(msg.value);
         // send the event to frontend
         emit Occupy(msg.sender, msg.value);
+    }
+
+    // set park lot available
+    function markAvailable() external onlyOwner {
+        currentStatus = LotStatus.VACANT;
     }
 
 

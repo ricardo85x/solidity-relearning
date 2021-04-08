@@ -4,6 +4,7 @@ const MappingExample = artifacts.require("./MappingExample.sol");
 const EnumExample = artifacts.require("./EnumExample.sol");
 const StorageArrayExample = artifacts.require("./StorageArrayExample.sol");
 const ValueTypes = artifacts.require("./ValueTypes.sol");
+const ParkingLot = artifacts.require("./ParkingLot.sol")
 
 module.exports = function(deployer) {
     deployer.deploy(FirstContract)
@@ -12,4 +13,5 @@ module.exports = function(deployer) {
     deployer.deploy(EnumExample)
     deployer.deploy(StorageArrayExample)
     deployer.deploy(ValueTypes)
+    deployer.deploy(ParkingLot)
 }
