@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity ^0.7.0;
 
-import "./Callable.sol";
+interface ICallable {
+    function getScore() external view returns (uint);
+}
 
 contract Calling {
 
@@ -13,7 +15,7 @@ contract Calling {
     }
 
     function callExternal() external view returns(uint) {
-        Callable callable =  Callable(callAddress);
+        ICallable callable =  ICallable(callAddress);
         return callable.getScore();
     }
     
