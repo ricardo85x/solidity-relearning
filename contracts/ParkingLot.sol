@@ -9,7 +9,6 @@ import "./Ownable.sol";
 /// @notice client pay to park, park lot got a owner, and could get full
 contract ParkingLot is Ownable {
 
-
     // track if parking lot is full
     enum LotStatus { VACANT, FULL }
     LotStatus public currentStatus;
