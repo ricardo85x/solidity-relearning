@@ -2,51 +2,43 @@
 pragma solidity ^0.7.0;
 
 import "./Ownable.sol";
+import "./ParkingSpot.sol";
 
-
-/// @title A parking Lot contract
-/// @author Ricardo
-/// @notice client pay to park, park lot got a owner, and could get full
 contract ParkingLot is Ownable {
 
-    // track if parking lot is full
-    enum LotStatus { VACANT, FULL }
-    LotStatus public currentStatus;
+    // spot addreses
+    mapping(uint => address) spots;
 
-
-    // Events to frontend
-    event Occupy(address _address, uint _value); 
-
-    constructor() {
-        // the person address who deployed the contract
-        owner = msg.sender;
-        // set current status
-        currentStatus = LotStatus.VACANT;
+    // create a parkingSpot
+    function createSpot(uint _spotId) external onlyOwner {
+        // deploy a new ParkingSpot contract with "new" tag
+        ParkingSpot spot = new ParkingSpot(_spotId);
+        // save the address of the new contract to spots mapping
+        spots[_spotId] = address(spot);
     }
 
-    // modifier to check vacancy
-    modifier checkVacancy {
-        require(currentStatus == LotStatus.VACANT, "Sorry, parking lot is Full");
-        _;
+    // check status of spot
+    function parkingSpotStatus(uint _spotId) external view returns(bool) {
+        // reference the deployed contract with it's address
+        ParkingSpot spot = ParkingSpot(spots[_spotId]);
+        // return true if it is vacant, otherwise return false
+        return spot.isVacant();
     }
 
-    // modifier to check ammount
-    modifier checkAmmount(uint _amount) {
-        require(msg.value >= _amount, "Sorry, you have to pay 0.001 to park" );
-        _;
-    }
- 
-    // parking function, where the client pay to park
-    function park() payable external checkVacancy checkAmmount(0.001 ether) {
-        currentStatus = LotStatus.FULL;
-        owner.transfer(msg.value);
-        // send the event to frontend
-        emit Occupy(msg.sender, msg.value);
+
+    // park on spot
+    function takeUpSpot(uint _spotId) payable external {
+        // reference the deployed contract with it's address
+        ParkingSpot spot = ParkingSpot(spots[_spotId]);
+        // park passing money
+        spot.park{value: msg.value}();
     }
 
-    // set park lot available
-    function markAvailable() external onlyOwner {
-        currentStatus = LotStatus.VACANT;
+    // free up the spot
+    function freeUpSpot(uint _spotId) external onlyOwner {
+        // reference the deployed contract with it's address
+        ParkingSpot spot = ParkingSpot(spots[_spotId]);
+        spot.markAvailable();
     }
 
 
