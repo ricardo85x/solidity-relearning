@@ -20,7 +20,8 @@ contract ParkingLot is Ownable {
     // check status of spot
     function parkingSpotStatus(uint _spotId) external view returns(bool) {
         // reference the deployed contract with it's address
-        ParkingSpot spot = ParkingSpot(spots[_spotId]);
+//        ParkingSpot spot = ParkingSpot(spots[_spotId]);
+        ParkingSpot spot = ParkingSpot(address(uint160(spots[_spotId])));
         // return true if it is vacant, otherwise return false
         return spot.isVacant();
     }
@@ -29,15 +30,24 @@ contract ParkingLot is Ownable {
     // park on spot
     function takeUpSpot(uint _spotId) payable external {
         // reference the deployed contract with it's address
-        ParkingSpot spot = ParkingSpot(spots[_spotId]);
+        // ParkingSpot spot = ParkingSpot(spots[_spotId]);
         // park passing money
-        spot.park{value: msg.value}();
+        // spot.park{value: msg.value}();
+
+        // calling ParkSpot with value to 'park'
+        (bool success, ) = (spots[_spotId]).call{ value: msg.value}("");
+
+        if (!success) {
+            revert("Call to spot contract fail");
+        }
+
     }
 
     // free up the spot
     function freeUpSpot(uint _spotId) external onlyOwner {
         // reference the deployed contract with it's address
-        ParkingSpot spot = ParkingSpot(spots[_spotId]);
+        // ParkingSpot spot = ParkingSpot(spots[_spotId]);
+        ParkingSpot spot = ParkingSpot(address(uint160(spots[_spotId])));
         spot.markAvailable();
     }
 

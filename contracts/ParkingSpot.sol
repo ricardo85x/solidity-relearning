@@ -42,12 +42,22 @@ contract ParkingSpot is Ownable {
     }
  
     // parking function, where the client pay to park
-    function park() payable external checkVacancy checkAmmount(0.001 ether) {
+    // function park() payable external checkVacancy checkAmmount(0.001 ether) {
+    //     currentStatus = LotStatus.FULL;
+    //     owner.transfer(msg.value);
+    //     // send the event to frontend
+    //     emit Occupy(msg.sender, msg.value);
+    // }
+
+
+    // simulating park function
+    receive() external payable checkVacancy checkAmmount(0.001 ether) {
         currentStatus = LotStatus.FULL;
         owner.transfer(msg.value);
         // send the event to frontend
         emit Occupy(msg.sender, msg.value);
     }
+
 
     // set park lot available
     function markAvailable() external onlyOwner {
